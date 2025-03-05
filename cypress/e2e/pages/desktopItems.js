@@ -35,10 +35,15 @@ class NewLDesktopsItems {
         cy.get('.ico-cart > .cart-label').click({ force: true })
         cy.wait(5000)
 
-        // Remove 1 item from cart and validate total price.
+        // select 1 item  to remove from cart and validate total price.
 
         cy.get(':nth-child(3) > .remove-from-cart > input').click({ force: true })
         cy.wait(5000)
+       
+        //Update the Cart
+
+        cy.get("body > div.master-wrapper-page > div.master-wrapper-content > div.master-wrapper-main > div > div > div.page-body > div > form > div.buttons > div > input.button-2.update-cart-button").click({ force: true })
+
 
         //Term and Conditions Applies
 
